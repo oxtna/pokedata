@@ -2,14 +2,9 @@
 
 import requests
 
+from constants import POKEMON_DATA_URL, POKEMON_DATA_FILENAME
+
 from typing import NoReturn
-
-
-# URL of Pokemon data in a csv format
-POKEMON_DATA_URL = "https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv"
-
-# Name of the csv file that the Pokemon data will be saved to
-POKEMON_DATA_FILENAME = "pokemon_dump.csv"
 
 
 def download_data(url: str = POKEMON_DATA_URL) -> str:
