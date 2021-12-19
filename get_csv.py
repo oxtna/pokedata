@@ -4,8 +4,6 @@ import requests
 
 from constants import POKEMON_DATA_URL, POKEMON_DATA_FILENAME
 
-from typing import NoReturn
-
 
 def download_data(url: str = POKEMON_DATA_URL) -> str:
     """
@@ -27,7 +25,7 @@ def strip_column_names(data: str) -> str:
     return data[first_newline_index + 1 :]
 
 
-def save_data(data: str, filename: str = POKEMON_DATA_FILENAME) -> NoReturn:
+def save_data(data: str, filename: str = POKEMON_DATA_FILENAME) -> None:
     """
     Write data to a csv file. The constant POKEMON_DATA_FILENAME is
     the default filename for the csv file.
@@ -36,7 +34,7 @@ def save_data(data: str, filename: str = POKEMON_DATA_FILENAME) -> NoReturn:
         file.write(data)
 
 
-def main() -> NoReturn:
+def main() -> None:
     """
     Download, extract and save Pokemon data as a csv file.
     """
