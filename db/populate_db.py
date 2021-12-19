@@ -52,8 +52,8 @@ def extract_data_from_csv(filename: str) -> list[Pokemon]:
             pokemon = Pokemon(
                 int(row[0]),
                 row[1],
-                row[2],
-                row[3],
+                row[2].lower(),
+                row[3].lower(),
                 int(row[4]),
                 int(row[5]),
                 int(row[6]),
