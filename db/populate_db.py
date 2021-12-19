@@ -1,11 +1,8 @@
 #!usr/bin/env python3
 
 import pymongo
-
 import csv
 from dataclasses import dataclass
-
-from constants import POKEMON_DATA_FILENAME
 
 
 @dataclass
@@ -88,7 +85,12 @@ def main() -> None:
     """
     Load the data from a csv file and insert it into a MongoDB database.
     """
-    pokemon = extract_data_from_csv(POKEMON_DATA_FILENAME)
+    import json
+
+    with open("script_constants.json", "r") as file:
+        constants = json.load(file)
+    pokemon_data_filename = constants["Pokemon_data_filename"]
+    pokemon = extract_data_from_csv(pokemon_data_filename)
     insert_data_into_db(pokemon)
 
 
