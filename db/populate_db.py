@@ -62,7 +62,7 @@ def extract_data_from_csv(filename: str) -> list[Pokemon]:
                 int(row[9]),
                 int(row[10]),
                 int(row[11]),
-                bool(row[12]),
+                row[12] == "True",
             )
             pokemon_list.append(pokemon)
     return pokemon_list
