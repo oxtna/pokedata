@@ -5,7 +5,7 @@ services:
   web:
     image: oxtna/pokedata-api:1.0
     ports:
-      - "8000:8000"
+      - "8000:80"
 
   database:
     image: mongo:latest
