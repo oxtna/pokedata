@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import get_csv
 import populate_db
 
