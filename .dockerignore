@@ -1,0 +1,12 @@
+# Ignore Python virtual environment
+env/
+
+# Ignore VS Code directories
+.vscode/
+
+# Ignore Git files and directories
+.git/
+.gitignore
+
+# Ignore csv files
+*.csv
