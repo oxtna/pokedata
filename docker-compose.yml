@@ -1,0 +1,17 @@
+services:
+
+  web:
+    image: oxtna/pokedata-api:1.0
+    ports:
+      - "8000:8000"
+
+  database:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - db-data:/data/db
+
+volumes:
+  db-data:
+    driver: local
